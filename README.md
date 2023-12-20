@@ -18,18 +18,21 @@ This API provides several endpoints for managing products:
 
 - **POST `/products`**: Add a new product.
     
-    - Usage: `POST [API_BASE_URL]/products`
+    - Usage: `POST http://localhost:3052/products`
     - Body: `{ "name": "Product Name", "description": "Product Description", ... }`
 - **PUT `/products/:id`**: Update a product by ID.
     
-    - Usage: `PUT [API_BASE_URL]/products/:id`
+    - Usage: `PUT http://localhost:3052/products/:id`
     - Body: `{ "name": "New Product Name", ... }`
 - **PATCH `/products/:id`**: Partially update a product by ID.
     
-    - Usage: `PATCH [API_BASE_URL]/products/:id`
+    - Usage: `PATCH http://localhost:3052/products/:id`
     - Body: `{ "description": "Updated Description" }`
+      
+MongoDB server `mongodb://localhost:27017`
 
 For more detailed examples, refer to see README.png
+
 
 ## Contributing
 
