@@ -31,7 +31,7 @@ This API provides several endpoints for managing products:
       
 MongoDB server `mongodb://localhost:27017`
 
-For more detailed examples, refer to see README.png
+For more detailed examples, refer to see [README.png](./README.png).
 
 
 ## Contributing
