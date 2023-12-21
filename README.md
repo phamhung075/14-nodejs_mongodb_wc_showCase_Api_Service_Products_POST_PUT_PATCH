@@ -76,7 +76,7 @@ This is a personal project series based on the lessons by @anonystick ([https://
 ``` 
 @url_dev=http://localhost:3052/v1/api/product/
 
-### Search Products by name
+### Modify Product
 PATCH {{url_dev}}/[PRODUCT_ID]
 Content-Type: application/json
 x-api-key: [API_KEY]
