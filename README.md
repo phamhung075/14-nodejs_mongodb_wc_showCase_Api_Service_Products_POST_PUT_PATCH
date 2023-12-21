@@ -1,44 +1,95 @@
-# nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH
+# Node.js MongoDB Showcase Projects
 
-## Description
 
-This project is a Node.js API service using MongoDB, designed for showcasing products. It supports various HTTP methods including POST, PUT, and PATCH, enabling users to create, update, and modify product data efficiently.
+This is a personal project series based on the lessons by @anonystick ([https://github.com/anonystick](https://github.com/anonystick)).
+## 1. [Authentication and API Key Management (HS256)](https://github.com/phamhung075/2-nodejs_mongodb_wc_showCase_Dynamic_for_ApiKey_and_Permissions_HS256/tree/master)
 
-## Installation
+## 2. [ErrorHandler ApiResponse](https://github.com/phamhung075/3-nodejs_mongodb_wc_showCase_ErrorHandler_API)
 
-To install this project, follow these steps:
+## 3. [Success Handler ApiResponse](https://github.com/phamhung075/4-nodejs_mongodb_wc_showCase_ApiResponseUseClass/tree/master?tab=readme-ov-file)
 
-1. Clone the repository: `git clone https://github.com/phamhung075/14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH.git`
-2. Navigate to the project directory: `cd nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH`
-3. Install dependencies: `npm install`
+## 4. [SignUp and Login Public Access](https://github.com/phamhung075/5-nodejs_mongodb_wc_showCase_SignUpLogin)
 
-## Usage
+## 5. [Logout Authentication](https://github.com/phamhung075/6-nodejs_mongodb_wc_showCase_LogoutAuthentication)
+## 6. [Refresh Token and Token Verification](https://github.com/phamhung075/7-nodejs_mongodb_wc_showCase_RefreshToken_verifyToken)
+## 7. [Schema for Products in E-commerce](https://github.com/phamhung075/8-nodejs_mongodb_wc_showCase_Schema_Products_Ecommerce)
+## 8. [API for Products Using Factory Pattern](https://github.com/phamhung075/11-nodejs_mongodb_wc_showCase_Api_Service_use_Factory_Pattern_Products_Senior_lv)
 
-This API provides several endpoints for managing products:
+## 9. [API Service for Product Draft, Publish, and Unpublish](https://github.com/phamhung075/12-nodejs_mongodb_wc_showCase_Api_Service_Products_isDraft_isPublish_unPublish)
+## 10. [API Service for Product Data Retrieval](https://github.com/phamhung075/13-nodejs_mongodb_wc_showCase_Api_Service_Products_findAll_findOne_selectData_unSelectData)
+## 11. API Service for Products: POST, PUT, PATCH
 
-- **POST `/products`**: Add a new product.
+### Introduction
+
+`14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH` is a Node.js application demonstrating the implementation of POST, PUT, and PATCH HTTP methods in product management services using MongoDB. This project showcases how to handle creating, updating, and partially updating product data in an e-commerce platform.
+
+### Installation
+
+- Clone the repository:
+
+    `git clone https://github.com/phamhung075/14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH.git`
     
-    - Usage: `POST http://localhost:3052/products`
-    - Body: `{ "name": "Product Name", "description": "Product Description", ... }`
-- **PUT `/products/:id`**: Update a product by ID.
+- Change to the directory:
+
+    `cd 14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH`
     
-    - Usage: `PUT http://localhost:3052/products/:id`
-    - Body: `{ "name": "New Product Name", ... }`
-- **PATCH `/products/:id`**: Partially update a product by ID.
+- Install dependencies:
+
+    `npm install`
     
-    - Usage: `PATCH http://localhost:3052/products/:id`
-    - Body: `{ "description": "Updated Description" }`
-      
-MongoDB server `mongodb://localhost:27017`
 
-For more detailed examples, refer to see [README.png](./README.png).
+### Features
 
+- **Product Model** (`./models/product.model.js`): Defines the product data structure and schema in MongoDB.
+- **Product Service** (`./services/product.service.js`): Manages the business logic for adding, updating, and patching product data.
+- **Product Repository** (`./repositories/product.repo.js`): Handles database operations for product services.
+- **Product Controller** (`./controllers/product.controller.js`): Orchestrates API endpoints for product data manipulation using POST, PUT, and PATCH methods.
+- **Utilities** (`./utils/utils.js`): Includes utility functions such as `updateNestedObjectParser` to support complex update operations.
 
-## Contributing
+### Usage
 
-Contributions are welcome! Please refer to the following guidelines:
+- Demonstrates CRUD operations (Create, Read, Update, Delete) with an emphasis on Update operations through POST, PUT, and PATCH methods.
+- Suitable for e-commerce platforms requiring dynamic product management capabilities.
 
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Commit your changes.
-4. Push to the branch and open a pull request.
+### MongoDB Connection
+
+- Connect to MongoDB using: `mongodb://localhost:27017/yourDatabase`
+
+### Additional Notes
+
+- The project emphasizes RESTful API design principles and best practices for managing product data.
+- The implementation can be adapted or extended for different e-commerce application requirements.
+
+### Postman Examples
+
+- **Signup**, **Login**, **Logout** examples as in the previous project.
+- **Token Refresh** examples as in the previous project.
+- **Create Product** examples as in the previous project.
+- **Publish Product** examples as in the previous project.
+- **UnPublish Product** examples as in the previous project.
+- **get all Draft Products** examples as in the previous project.
+- **get all Published Products** examples as in the previous project.
+- **Find Product** examples as in the previous project.
+- **Find All Products** examples as in the previous project.
+- **Search Products by name** examples as in the previous project.
+- **Modify Product** examples
+``` 
+@url_dev=http://localhost:3052/v1/api/product/
+
+### Search Products by name
+PATCH {{url_dev}}/[PRODUCT_ID]
+Content-Type: application/json
+x-api-key: [API_KEY]
+x-client-id: [SHOP_ID]
+authorization: [ACCESS_TOKEN]
+
+{
+    "product_name": "New Leggings polaire green",
+    "product_type": "Clothing",
+    "product_attributes": {
+                "material": "Paper"
+            }
+}
+```
+
+For more detailed examples, refer to see [README.png](./help14.png).
