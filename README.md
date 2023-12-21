@@ -17,11 +17,11 @@ This is a personal project series based on the lessons by @anonystick ([https://
 
 ## 9. [API Service for Product Draft, Publish, and Unpublish](https://github.com/phamhung075/12-nodejs_mongodb_wc_showCase_Api_Service_Products_isDraft_isPublish_unPublish)
 ## 10. [API Service for Product Data Retrieval](https://github.com/phamhung075/13-nodejs_mongodb_wc_showCase_Api_Service_Products_findAll_findOne_selectData_unSelectData)
-## 11. API Service for Products: POST, PUT, PATCH
+## 11. API Service for Products: PATCH
 
 ### Introduction
 
-`14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH` is a Node.js application demonstrating the implementation of POST, PUT, and PATCH HTTP methods in product management services using MongoDB. This project showcases how to handle creating, updating, and partially updating product data in an e-commerce platform.
+`14-nodejs_mongodb_wc_showCase_Api_Service_Products_POST_PUT_PATCH` is a Node.js application demonstrating the implementation of PATCH HTTP methods in product management services using MongoDB. This project showcases how to handle creating, updating, and partially updating product data in an e-commerce platform.
 
 ### Installation
 
@@ -43,12 +43,12 @@ This is a personal project series based on the lessons by @anonystick ([https://
 - **Product Model** (`./models/product.model.js`): Defines the product data structure and schema in MongoDB.
 - **Product Service** (`./services/product.service.js`): Manages the business logic for adding, updating, and patching product data.
 - **Product Repository** (`./repositories/product.repo.js`): Handles database operations for product services.
-- **Product Controller** (`./controllers/product.controller.js`): Orchestrates API endpoints for product data manipulation using POST, PUT, and PATCH methods.
+- **Product Controller** (`./controllers/product.controller.js`): Orchestrates API endpoints for product data manipulation using PATCH methods.
 - **Utilities** (`./utils/utils.js`): Includes utility functions such as `updateNestedObjectParser` to support complex update operations.
 
 ### Usage
 
-- Demonstrates CRUD operations (Create, Read, Update, Delete) with an emphasis on Update operations through POST, PUT, and PATCH methods.
+- Demonstrates CRUD operations (Update) with an emphasis on Update operations through PATCH methods.
 - Suitable for e-commerce platforms requiring dynamic product management capabilities.
 
 ### MongoDB Connection
